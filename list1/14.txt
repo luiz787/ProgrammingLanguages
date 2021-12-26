@@ -1,0 +1,14 @@
+Da esquerda para a direita:
+
+a) int * real -> real
+b) 
+    1. int * real -> real
+    2. real * int -> real
+c)
+    1. int * real -> real
+    2. real * int -> real (1a operação a ser realizada devido ao parênteses)
+d)
+    1. int * int -> int (2a)
+    2. int * real -> real (3a)
+    3. real * real -> real (4a)
+    4. real * int -> real (1a operação a ser realizada devido ao parênteses)

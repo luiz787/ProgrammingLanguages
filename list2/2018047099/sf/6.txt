@@ -1,0 +1,24 @@
+a)
+
+| (While(b, stm)) => if (evalB b s) then 
+        let val ss = evalStm stm s in evalStm stm ss end 
+    else s
+
+b)
+
+<S,s> -> s', <repeat S until b>s' -> s''
+---------------------------------------- if B[b]s' = ff
+<repeat S until b>s -> s''
+
+<S,s> -> s'
+----------------------- if B[b]s' = tt
+<repeat S until b>s->s'
+
+c)
+
+| (Repeat(stm, b)) =>
+    let val ss = evalStm stm s val bool = evalB b ss
+        in if bool then ss else evalStm stm ss
+    end
+
+d) 

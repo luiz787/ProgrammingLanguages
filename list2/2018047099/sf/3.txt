@@ -1,0 +1,8 @@
+b[y -> a0]:
+
+true[y->a0] = tt
+false[y->a0] = ff
+[a1 = a2][y->a0] = a1[y->a0] = a2[y -> a0]
+[a1 <= a2][y->a0] = a1[y->a0] <= a2[y->a0]
+[¬b][y->a0] = ¬b[y->a0] (aqui não é o certo "passar a negação pra fora", mas escrevi assim por ser mais conciso e não escrever o if else formal, definido na tabela 1.2)
+[b1 ∧ b2][y->a0] = b1[y->a0] and b2[y->a0]

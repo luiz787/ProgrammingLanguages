@@ -1,0 +1,24 @@
+a) 
+- Bloco 0 => escopo global
+- Bloco 1 => escopo da função g
+- Bloco 2 => escopo do let externo
+- Bloco 3 => escopo da função f
+- Bloco 4 => escopo da função h
+- Bloco 5 => let dentro da função h
+
+b) g, x, inc, f, y, h, z
+
+c)
+
+- g => bloco 0
+- x => bloco 1
+- inc => bloco 2, bloco 5
+- f => bloco 2
+- y => bloco 3
+- h => bloco 2
+- z => bloco 4
+
+d) 6. Se SML possuísse escopo dinâmico, o valor seria 7.
+Isso aconteceria pois ao executar f z no bloco 4, f capturaria
+inc do bloco 4 (dinamicamente), que possui valor 2, diferentemente
+da situação de escopo estático, na qual f capturaria inc do bloco 2, com valor 1.

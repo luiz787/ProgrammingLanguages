@@ -1,0 +1,13 @@
+a) Em ML ifs são expressões, e expressões devem ser avaliadas para gerar resultados. Dessa forma, há uma obrigatoriedade de ifs
+serem acompanhados de elses para que sempre tenham um resultado.
+No caso do exemplo, a expressão não tem else, o que impede que ela tenha resultado caso a condição
+do if não seja satisfeita (o que é o caso no exemplo). Essa situação é análoga a matches não-exaustivos,
+embora estes não causem erros (apenas warnings).
+
+b) Apesar de sobrecarregado para trabalhar com inteiros e reais, o operador multiplicação (*) não suporta operandos de diferentes tipos.
+A expressão do exemplo tentou multiplicar um inteiro por um real, mas essa sobrecarga (int * real) não é definida para o operador multiplicação em ML,
+então a expressão acaba resultando em um erro.
+
+c) Pattern-matching interpreta as cláusulas de cima para baixo. Isso significa que a cláusula de baixo nunca será alcançada, uma vez que a cláusula
+de cima, por não ter nenhum tipo de restrição, sempre dará match no número passado como argumento. Se ML não apontasse isso como um erro,
+nesse caso, teríamos uma recursão infinita.

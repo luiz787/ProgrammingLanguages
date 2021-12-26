@@ -1,0 +1,14 @@
+O problema da função bad_max é que caso a comparação
+da linha 18 avaliar para falso, ela fará duas chamadas
+recursivas para si mesma, fazendo com que o custo
+de computar o valor de interesse seja exponencial
+no pior caso, onde a lista é ordenada:
+
+                              bad_max([1,2,3])
+                             /                \
+             bad_max([1, 2])                   bad_max([1, 2])
+            /               \                    \                 \
+bad_max([2]) = 2             bad_max([2]) = 2    bad_max([2]) = 2   bad_max([2]) = 2
+
+É fácil observar que acontecerão 2^n-1 chamadas, o que obviamente não é desejado.
+Para simular o custo impraticável dessa função, basta executar bad_max (countup (1, 100)).

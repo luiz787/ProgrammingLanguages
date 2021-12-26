@@ -1,0 +1,3 @@
+a) 1. Como o escopo é estático, q captura o estado no momento de sua declaração, e nesse caso captura o valor não-inicializado de x, do escopo da função p, e incrementa 1 nesse valor. Entretanto, o argumento de write é x do escopo de r, que é atribuído como 1 na linha 10.
+
+b) 2. Como o escopo é dinâmico, q vai capturar x do escopo de r (que é o mais "recente"), e incrementar seu valor original (1) em 1 unidade.
