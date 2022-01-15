@@ -1,0 +1,24 @@
+- Mark and sweep: a cada ciclo de coleção de lixo, é feita uma travessia
+no grafo de objetos e os objetos alcançáveis são marcados. Após finalizar
+a travessia, todos os objetos que não foram marcados são coletados e a
+memória associada é liberada
+
+- Copying collector: a heap é dividida em duas metades, e apenas uma delas
+é usada para alocações. O ciclo de coleção de lixo consiste em 
+copiar os blocos relevantes (determinar o que é ou não relevante
+pode ser a mesma técnica usada no mark and sweep) da metade que está em uso
+para a outra (que está totalmente livre), fazendo alocações contíguas,
+o que previne a fragmentação.
+
+- Reference counting: todo bloco de memória é associado a um contador, que
+é incrementado sempre que uma referência ao bloco é copiada, e decrementado sempre
+que uma referência ao bloco é descartada. Quando o contador atinge 0, o
+bloco é coletado e a memória associada é liberada.
+
+Exemplo de aplicação: programa com objetos complexos, com vários
+níveis de apontamento, com alocações (e "drops") frequentes e uso
+de memória elevado.
+Nesse caso, a melhor estratégia de GC é reference counting, pois
+vai aproveitar melhor o espaço da heap quando comparado com copying collector,
+e devido a compexidade dos objetos, o custo do mark and sweep pode ser muito alto.
+

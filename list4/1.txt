@@ -1,0 +1,3 @@
+b - o programa deve ser armazenado para a execução
+de instruções, e os estados que podem estar
+associados a um ou mais "bindings".

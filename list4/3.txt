@@ -1,0 +1,10 @@
+a)
+
+valor_inicial: memória estática
+valor_intermediário: memória estática
+valores: memória dinâmica (heap)
+taxa: memória dinâmica (stack)
+
+b)
+
+valores = [25, 75, 15]

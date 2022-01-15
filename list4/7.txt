@@ -1,0 +1,19 @@
+a) Polimorfismo paramétrico (uso de template) e polimorfismo de operadores 
+(sobrescrita dos operadores * e ->)
+
+b) Nesse caso não há leak de memória. A variável p será liberada
+no fim do escopo de foo, pois é uma variável que está na stack, 
+que é gerenciada automaticamente. Quando p for liberada,
+seu destrutor será invocado pela linguagem,
+que por sua vez vai invocar delete no ponteiro recebido como argumento no
+construtor, no caso, o ponteiro para a string "I did one P.O.F!\n",
+que foi alocada no heap, assim evitando qualquer tipo de vazamento.
+
+c) Nesse caso não há leak de memória. De forma similar à situação anterior,
+p sairá do escopo, mas não no fim da função foo e sim no fim do bloco try.
+Nesse momento, o destrutor será invocado automaticamente
+(pois p está na stack) e o ponteiro para a string será liberado.
+
+d) Nesse caso acontece um leak de memória. O statement "delete p" é
+código morto e nunca será executado, portanto o ponteiro p não será
+liberado em hipótese alguma, gerando um vazamento de memória.
