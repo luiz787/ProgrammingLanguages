@@ -1,0 +1,14 @@
+a)
+1. s deve possuir um método isNotEmpty, que retorna um valor do tipo bool
+(ou que possa ser transformado em bool) para avaliação da condição do while.
+2. s deve possuir um método remove.
+
+b) duck typing significa que se algo possui um conjunto de características
+esperadas em determinado contexto, provavelmente esse algo é bom o suficiente
+para ser utilizado em tal contexto. A relação de duck typing com este método
+é que o método pode receber argumentos tanto do tipo Queue quanto do tipo Stack,
+pois ambos possuem as características esperadas: ter um método isNotEmpty
+que retorne bool e ter um método remove. O ponto chave é que Python não irá
+rejeitar algum objeto em removeAll apenas baseado em qual classe aquele
+objeto pertence (mesmo que o objeto não possua esses métodos, Python vai
+tentar executá-los (e obviamente, falhar)).

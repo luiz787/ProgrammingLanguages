@@ -1,0 +1,23 @@
+O problema do diamante é uma situação que pode ocorrer em linguagens que
+permitem herança múltipla. Suponha uma hierarquia de classes,
+na qual A é a classe base, B e C estendem A, e D estende B e C simultaneamente.
+Suponha ainda que B e C definem métodos homônimos f, e que D não sobrescreva f.
+Isso significa que haverá uma ambiguidade ao chamar D.f, pois pode se tratar
+tanto de f definido em B ou f definido em C. Linguagens diferentes tratam
+o problema de formas diferentes:
+    - C++ permite herança múltipla, mas rejeita programas que apresentem
+    ambiguidades devido ao problema do diamante
+    - Python resolve para o método da primeira superclasse que aparece
+    na lista de extensões da subclasse. Exemplo:
+    se a definição de D for class D(B, C) {}, D.f será resolvido
+    sempre para B, pois aparece antes de C na lista de extensões.
+    - Java não permite herança múltipla
+
+O problema tem esse nome pois a hierarquia de classes, ao ser representada
+como um grafo, tem formato de um diamante:
+
+  A
+ / \
+B   C
+ \ /
+  D
