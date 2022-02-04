@@ -1,0 +1,21 @@
+a) O valor impresso é 5. Na chamada de p em main,
+o valor dos parâmetros reais y e z será de 1,
+pois a declaração de x no escopo de main faz shadowing
+da declaração de x no escopo global. O valor de x
+é passado por valor para p em ambos y e z.
+
+Dentro de p, x se refere à variável x do escopo
+global, de valor original 0. A reatribuição
+de x faz com que o valor de x no escopo global
+se torne 1, e as reatribuições de y e z só alteram
+os valores dentro do escopo de p (ambos de 1 para 2).
+Portanto, antes do printf, x=1, y=2 e z=2, e
+o valor final de x+y+z é 5.
+
+b) Nesse caso, o valor impresso é 7.
+A diferença é que a reatribuição de y vai alterar
+o valor de x no escopo de p para 2, e como z aponta
+para o mesmo endereço, o valor de z também passa a ser
+2. Como z também é incrementado, o mesmo efeito
+acontece em y, e ao final de todos os incrementos
+temos x=1, y=3, z=3, o que resulta em 7.

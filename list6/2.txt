@@ -1,0 +1,17 @@
+a)
+
+int main(int argc, char** argv) {
+    printf("sum = %d\n", (argc) + (argv[0][0]));
+}
+
+b)
+
+Capture de variáveis é o que acontece quando uma variável
+passada para um macro tem o mesmo nome de uma variável
+declarada internamente no macro. Quando isso acontece,
+diz-se que a variável foi capturada: ela acaba sendo
+"shadowed" pela variável local e as operações
+declaradas no macro em termos dessa variável externa
+vão na verdade ser "capturadas" pela variável local
+do macro, podendo levar a expansões que não fazem o
+que o programador esperaria.

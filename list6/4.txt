@@ -1,0 +1,14 @@
+a) Objetos (instâncias de classes). Como esse tipo de
+variável pode possuir um número arbitrário de membros,
+copiar seu valor a cada chamada de função pode
+ser muito custoso tanto em termos de processamento
+quando em termos de memória. Ao passar por referência,
+o valor só terá uma instância "concreta", e por meio
+da indireção provida por ponteiros é possível
+ler e atualizar os valores associados à classe
+(além de chamar seus métodos), de forma que o custo
+de espaço é apenas o do ponteiro (4 ou 8 bytes a
+depender da arquitetura), e o custo de processamento
+para fazer a cópia não existe.
+
+b) Na pilha.

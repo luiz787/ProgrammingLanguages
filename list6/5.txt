@@ -1,0 +1,14 @@
+a)
+m1.i = 4
+m2.i = 4
+
+b)
+m1.i = 3
+m2.i = 3
+
+c)
+m1.i = 4
+m2.i = 4
+
+d) Passagem por valor
+e) Passagem por valor (da referência)
