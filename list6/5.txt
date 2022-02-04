@@ -10,5 +10,8 @@ c)
 m1.i = 4
 m2.i = 4
 
-d) Passagem por valor
-e) Passagem por valor (da referência)
+d) Passagem por valor.
+e) Passagem por valor, mas o valor passado é o valor da referência (ponteiro). Isso
+que garante que as reatribuições dentro das funções não mudem o valor fora
+dela, mas permite que seja possível mutar seus valores
+internos.

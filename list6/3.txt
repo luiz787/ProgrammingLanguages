@@ -1,0 +1,17 @@
+a)
+
+O valor de Z após a chamada de Sigma é 30.
+Devido a semântica de passagem por nome de seu parâmetro formal k,
+Sigma irá alterar i em dois pontos: na atribuição k := m e na atribuição
+k := k + 1. Sigma também tem u como parâmetro passado por nome, e sempre
+que uma leitura de u for feita, o valor utilizado será o quadrado do valor
+atualizado de i.
+Com isso, i será atribuído para 1 antes de entrar no loop.
+Dentro do loop, ocorrerão 4 iterações, onde s será acrescido de
+1, 4, 9 e 16, que são os quadrados dos valores
+no range [m, n], resultando no valor final 30.
+
+b) 
+
+Esse programa calcula um somatório, de i=1 até i=100, da expressão
+1/((i+a)^2), onde a é um valor lido da entrada.
