@@ -1,0 +1,1 @@
+firstPair([H|[H|_]]).
